@@ -1,0 +1,60 @@
+mysql> CREATE TABLE RESTART (Student_ID MEDIUMINT NOT NULL AUTO_INCREMENT, Student_Name VARCHAR(100) NOT NULL,Restart_City VARCHAR(30),Graduation_Date DATETIME,PRIMARY KEY (Student_ID));
+Query OK, 0 rows affected (0.02 sec)
+
+
+
+INSERT INTO RESTART (Student_Name,Restart_City,Graduation_Date) VALUES ('Amanda','Denver','2020-01-01 10:10:10');
+Query OK, 1 row affected (0.02 sec)
+
+INSERT INTO RESTART (Student_Name,Restart_City,Graduation_Date) VALUES ('Akshaya','NewYork','2020-01-01 10:10:10');
+Query OK, 1 row affected (0.02 sec)
+INSERT INTO RESTART (Student_Name,Restart_City,Graduation_Date) VALUES ('Ola','Newark','2020-01-01 10:10:10');
+Query OK, 1 row affected (0.02 sec)
+INSERT INTO RESTART (Student_Name,Restart_City,Graduation_Date) VALUES ('Abel','Jersey City','2020-01-01 10:10:10');
+Query OK, 1 row affected (0.02 sec)
+INSERT INTO RESTART (Student_Name,Restart_City,Graduation_Date) VALUES ('Zee','Trenton','2020-01-01 10:10:10');
+Query OK, 1 row affected (0.02 sec)
+INSERT INTO RESTART (Student_Name,Restart_City,Graduation_Date) VALUES ('Manny','Paterson','2020-01-01 10:10:10');
+Query OK, 1 row affected (0.02 sec)
+INSERT INTO RESTART (Student_Name,Restart_City,Graduation_Date) VALUES ('Roopa','Metuchen','2020-01-01 10:10:10');
+Query OK, 1 row affected (0.02 sec)
+INSERT INTO RESTART (Student_Name,Restart_City,Graduation_Date) VALUES ('Bhadresh','Mahwah','2020-01-01 10:10:10');
+Query OK, 1 row affected (0.02 sec)
+INSERT INTO RESTART (Student_Name,Restart_City,Graduation_Date) VALUES ('Nosa','Edison','2020-01-01 10:10:10');
+Query OK, 1 row affected (0.02 sec)
+INSERT INTO RESTART (Student_Name,Restart_City,Graduation_Date) VALUES ('Shafan','Princeton','2020-01-01 10:10:10');
+Query OK, 1 row affected (0.02 sec)
+
+
+
+mysql> SELECT * FROM RESTART;
++------------+--------------+--------------+---------------------+
+| Student_ID | Student_Name | Restart_City | Graduation_Date     |
++------------+--------------+--------------+---------------------+
+|          1 | Amanda       | Denver       | 2020-01-01 10:10:10 |
+|          2 | Akshaya      | NewYork      | 2020-01-01 10:10:10 |
+|          3 | Ola          | Newark       | 2020-01-01 10:10:10 |
+|          4 | Abel         | Jersey City  | 2020-01-01 10:10:10 |
+|          5 | Zee          | Trenton      | 2020-01-01 10:10:10 |
+|          6 | Manny        | Paterson     | 2020-01-01 10:10:10 |
+|          7 | Roopa        | Metuchen     | 2020-01-01 10:10:10 |
+|          8 | Bhadresh     | Mahwah       | 2020-01-01 10:10:10 |
+|          9 | Nosa         | Edison       | 2020-01-01 10:10:10 |
+|         10 | Shafan       | Princeton    | 2020-01-01 10:10:10 |
++------------+--------------+--------------+---------------------+
+10 rows in set (0.00 sec)
+
+
+
+
+
+
+CREATE TABLE CLOUD_PRACTITIONER  (Student_ID MEDIUMINT NOT NULL AUTO_INCREMENT,certification_date DATE ,PRIMARY KEY (Student_ID));
+
+INSERT INTO CLOUD_PRACTITIONER (certification_date) VALUES ('2022-05-05');
+INSERT INTO CLOUD_PRACTITIONER (certification_date) VALUES ('2022-05-06');
+INSERT INTO CLOUD_PRACTITIONER (certification_date) VALUES ('2022-05-07');
+INSERT INTO CLOUD_PRACTITIONER (certification_date) VALUES ('2022-05-08');
+INSERT INTO CLOUD_PRACTITIONER (certification_date) VALUES ('2022-05-05');
+
+SELECT RESTART.Student_ID,RESTART.Student_Name, CLOUD_PRACTITIONER.certification_date FROM RESTART INNER JOIN CLOUD_PRACTITIONER ON RESTART.Student_ID = CLOUD_PRACTITIONER.Student_ID;
